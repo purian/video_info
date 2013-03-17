@@ -3,7 +3,7 @@ module VideoInfo
     attr_accessor :video_id, :embed_url, :embed_code, :url, :provider, :title, :description, :keywords,
                   :duration, :date, :width, :height,
                   :thumbnail_small, :thumbnail_medium, :thumbnail_large,
-                  :view_count,
+                  :view_count, :user_id,
                   :openURI_options
 
     def initialize(url, options = {})
@@ -37,6 +37,7 @@ module VideoInfo
         @thumbnail_medium = video['thumbnail_medium']
         @thumbnail_large  = video['thumbnail_large']
         @view_count       = video['stats_number_of_plays'].to_i
+        @user_id          = video['user_id']
       rescue
         nil
       end
