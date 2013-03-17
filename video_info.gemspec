@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "video_info"
 
-  s.add_dependency 'multi_json'
+  s.add_dependency 'multi_json', '>= 1.7.0'
 
   s.add_development_dependency 'bundler'
   s.add_development_dependency 'rspec'
